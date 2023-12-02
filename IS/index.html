@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steganography Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Welcome to Steganography</h1>
+        <label for="option">Choose an option:</label>
+        <select id="option">
+            <option value="1">Encode Image</option>
+            <option value="2">Decode Image</option>
+            <option value="3">Encode Audio</option>
+            <option value="4">Decode Audio</option>
+        </select>
+        <div id="inputs">
+            <!-- Input fields will be added dynamically based on the selected option -->
+        </div>
+        <button onclick="execute()">Execute</button>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function execute() {
+            var option = document.getElementById('option').value;
+
+            if (option == '1') {
+                var imageName = prompt("Enter image name (with extension):");
+                var data = prompt("Enter data to be encoded:");
+                var newImageName = prompt("Enter the name of the new image (with extension):");
+                // Perform AJAX request to execute the Python code on the server
+                // Display the result in the output div
+            } else if (option == '2') {
+                var imageName = prompt("Enter image name (with extension):");
+                // Perform AJAX request to execute the Python code on the server
+                // Display the result in the output div
+            } else if (option == '3') {
+                var audioName = prompt("Enter audio file name (with extension):");
+                var message = prompt("Enter the message to hide in the audio file:");
+                // Perform AJAX request to execute the Python code on the server
+                // Display the result in the output div
+            } else if (option == '4') {
+                var audioName = prompt("Enter audio file name (with extension):");
+                // Perform AJAX request to execute the Python code on the server
+                // Display the result in the output div
+            }
+        }
+    </script>
+</body>
+</html>
